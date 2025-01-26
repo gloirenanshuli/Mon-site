@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Mobile</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <!-- Écran de Chargement -->
+  <div id="loadingScreen">
+    <div class="loading-content">
+      <h1 id="appName">Gérance Plus TechGn</h1>
+      <div id="logo"><img src="logosite.jpg" class="logo">
+      <p>Chargement...</p></div>
+    </div>
+  </div>
+
+  <!-- Page Principale -->
+  <div id="appContent" style="display:none;">
+    <header>
+      <h1>Gérance plus</h1>
+    </header>
+
+    <!-- Interface Calcul Produits -->
+    <div id="productCalc">
+      <h2>Calcul des Produits</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Produit</th>
+            <th>Prix (USD)</th>
+            <th>Quantité</th>
+            <th>Total (USD)</th>
+          </tr>
+        </thead>
+        <tbody id="productTable">
+          <!-- Contenu du tableau généré par JS -->
+        </tbody>
+      </table>
+      <button id="addProductBtn">Ajouter un produit</button>
+      <button id="calculateTotalBtn">Calculer le total</button>
+      <p id="totalAmount">Total: 0 USD</p>
+    </div>
+
+    <!-- Conversion Monétaire -->
+    <div id="currencyExchange">
+      <h2>Conversion Monétaire</h2>
+      <input type="number" id="currencyAmount" placeholder="Montant à convertir">
+      <select id="currencyType">
+        <option value="usdToCdf">USD vers CDF</option>
+        <option value="cdfToUsd">CDF vers USD</option>
+      </select>
+      <button id="convertCurrencyBtn">Convertir</button>
+      <p id="conversionResult"></p>
+    </div>
+
+    <!-- Options en Bas -->
+    <div class="options-container">
+      <button id="shareAppBtn">Partager l'application</button>
+      <button id="backBtn">Retour</button>
+      <button id="exitAppBtn">Quitter l'application</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
